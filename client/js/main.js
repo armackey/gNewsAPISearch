@@ -2,20 +2,18 @@ $(document).ready(function() {
 
 var deferred = $.Deferred();
 
+$('#currentTopic').text('Awaiting for you\'re search..');
+
+// *** create function to remove previous search ***
+
 
 function placeUserInput(arg) {
-  // check to see if DOM elem has text first
-  // if so, replace it
-  if ($('#currentTopic').text()) {
-    return $('#currentTopic').text(arg);
-  } else {
-    return $('#currentTopic').text(arg);
-  }
+  return $('#currentTopic').text(arg);
 }
 
 function Elem(val) {
   this.val = val;
-  console.log(this.val.image.url);
+console.log(this.val);
   $('<div><img src='+ this.val.image.url +'></div>').appendTo($('.images'));
 }
 
@@ -29,6 +27,7 @@ function sendData() {
     if (!data || null || undefined) {
       $('#currentTopic').text('Data not found. Please try your search again');
     }
+
     data.forEach(function(elem, i) {
       
       if (elem.image) {
