@@ -8,7 +8,7 @@ input {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:285px;
+  width:60%;
   border:none;
   border-bottom:1px solid #757575;
   opacity: 0;
@@ -276,7 +276,7 @@ a {
 
 .layer > .title {
   position: relative;
-  top: -60px;
+  top: -28px;
   margin-left: 10px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
@@ -288,7 +288,7 @@ a {
 
 span {
   position: relative;
-  top: -109px;
+  top: -85px;
   font-size: 12px;
   float: right;
 }

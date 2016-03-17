@@ -14,7 +14,6 @@ $('input').click(function() {
    $(this).css('opacity', '0'); 
   });
 
-
 // *** create function to remove previous search ***
 function deletePreviousContent(arg) {
   deferred.resolve($(arg).remove());
@@ -38,8 +37,11 @@ function sendData() {
   };
 
   $.post("/topic", user, function(data) {
-    if (!data || null || undefined) {
+    console.log(data);
+    if (!data || data === null || data === undefined || data.length < 1) {
       $('#currentTopic').text('Data not found. Please try your search again');
+    } else {
+      placeUserInput(user.input);
     }
 
     setPreviousSearchesOnDom(previousSearches);
@@ -54,7 +56,7 @@ function sendData() {
   }).then(function() {
     $('input').css('opacity', '0');
     previousSearches.push(user.input);
-    placeUserInput(user.input);
+    
   });
 }
   // for pressing the submit button
