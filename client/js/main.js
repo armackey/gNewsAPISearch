@@ -27,7 +27,9 @@ function placeUserInput(arg) {
 
 function Elem(val) {
   this.val = val;
-  $('<div class="add-content"><img src='+ this.val.image.url +'></div>').appendTo($('.images'));
+  var results = this.val;
+  console.log(results);
+  $('<div class="add-content"><a href="'+results.signedRedirectUrl+'"</a><img src='+ results.image.url +'></div><div class="layer"><p>'+results.content+'</p><div class="title">'+results.title+'</div><span>'+results.publishedDate+'</span></div>').appendTo($('.images'));
 }
 
 function sendData() {
@@ -44,7 +46,8 @@ function sendData() {
 
     data.forEach(function(elem, i) {        
       if (elem.image) {
-        var content = new Elem(elem);  
+        var content = new Elem(elem);
+
       }
     });
 
