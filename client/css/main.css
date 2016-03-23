@@ -268,7 +268,7 @@ img {
 @media (min-width: 100px) {
 
   #currentTopic, #previousTopic {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   span {
@@ -286,14 +286,21 @@ img {
   }
 
   input {
-    width: 45%;
+    width: 30%;
+    position: relative;
+    left: 24px;
+  }
+
+  label {
+    left: 30px;
+    top: 16px;
   }
   
 }
 
 @media (min-width: 480px) {
   #currentTopic, #previousTopic {
-    font-size: 26px;
+    font-size: 18px;
   }
   
   input {
